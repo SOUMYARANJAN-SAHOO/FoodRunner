@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activity.LoginActivity">
+    <ImageView
+        android:id="@+id/imgAppLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/app_icon"/>
+
+    <TextView
+        android:id="@+id/txtRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_below="@id/imgAppLogo"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/chewy"
+        android:text="@string/register"
+        android:textAlignment="center"
+        android:textColor="@color/colorContrast"
+        android:textSize="30sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtlName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtRegister"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="@string/name"
+        android:textColorHint="@color/colorContrast"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/colorSecondary"
+        app:boxStrokeWidth="3dp"
+        app:hintTextColor="@color/colorContrast"
+        app:startIconDrawable="@drawable/person"
+        app:startIconTint="@color/colorSecondary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chewy"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textColor="@color/colorContrast"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtlEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtlName"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="@string/email"
+        android:textColorHint="@color/colorContrast"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/colorSecondary"
+        app:boxStrokeWidth="3dp"
+        app:hintTextColor="@color/colorContrast"
+        app:startIconContentDescription="email"
+        app:startIconDrawable="@drawable/email"
+        app:startIconTint="@color/colorSecondary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chewy"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorContrast"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtlMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtlEmail"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="@string/mobile_number"
+        android:textColorHint="@color/colorContrast"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/colorSecondary"
+        app:boxStrokeWidth="3dp"
+        app:hintTextColor="@color/colorContrast"
+        app:prefixText="@string/prefix"
+        app:prefixTextColor="@color/colorContrast"
+        app:startIconContentDescription="mobile number"
+        app:startIconDrawable="@drawable/phone"
+        app:startIconTint="@color/colorSecondary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chewy"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:textColor="@color/colorContrast"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtlAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtlMobileNumber"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="@string/delivery_address"
+        android:textColorHint="@color/colorContrast"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/colorSecondary"
+        app:boxStrokeWidth="3dp"
+        app:hintTextColor="@color/colorContrast"
+        app:startIconContentDescription="mobile number"
+        app:startIconDrawable="@drawable/address"
+        app:startIconTint="@color/colorSecondary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chewy"
+            android:inputType="textPostalAddress"
+            android:textColor="@color/colorContrast"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtlPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtlAddress"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/colorContrast"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/colorSecondary"
+        app:boxStrokeWidth="3dp"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/colorSecondary"
+        app:hintTextColor="@color/colorContrast"
+        app:startIconContentDescription="mobile number"
+        app:startIconDrawable="@drawable/password"
+        app:startIconTint="@color/colorSecondary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chewy"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textColor="@color/colorContrast"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtlConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtlPassword"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="@string/confirm_password"
+        android:textColorHint="@color/colorContrast"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/colorSecondary"
+        app:boxStrokeWidth="3dp"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/colorSecondary"
+        app:hintTextColor="@color/colorContrast"
+        app:startIconContentDescription="mobile number"
+        app:startIconDrawable="@drawable/password"
+        app:startIconTint="@color/colorSecondary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chewy"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textColor="@color/colorContrast"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtlConfirmPassword"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/chewy"
+        android:letterSpacing="0.2"
+        android:text="@string/register"
+        android:textColor="@color/colorContrast"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:strokeColor="@color/colorSecondary"
+        app:strokeWidth="3dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Term_n_policy"
+        android:layout_below="@id/btnRegister"
+        android:textAlignment="center"
+        android:textStyle="normal"
+        android:fontFamily="@font/chewy"
+        android:textSize="16sp"
+        android:textColor="@color/colorSecondary"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgForest"-->
+<!--        android:layout_width="134dp"-->
+<!--        android:layout_height="240dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="-55dp"-->
+<!--        android:src="@drawable/trees_login" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imgForest"-->
+<!--            android:layout_width="195dp"-->
+<!--            android:layout_height="283dp"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="-68dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/delivery_man_login" />-->
+
+
+</RelativeLayout>
