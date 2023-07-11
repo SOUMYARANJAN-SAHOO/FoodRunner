@@ -51,5 +51,5 @@ password = "duck"
 
 ## Authors
 
-- [SOUMYARANJAN SAHOO](https://www.github.com/SOUMYARANJANSHOO)
+- [SOUMYARANJAN SAHOO](https://www.github.com/SOUMYARANJAN-SAHOO)
 
