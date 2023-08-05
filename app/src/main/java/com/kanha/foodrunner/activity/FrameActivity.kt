@@ -7,24 +7,32 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.kanha.foodrunner.R
 import com.kanha.foodrunner.databinding.ActivityFrameBinding
+import com.kanha.foodrunner.fragmeedtPasswordnts.UserProfileFragment
 import com.kanha.foodrunner.fragments.DashboardFragment
 import com.kanha.foodrunner.fragments.FAQFragment
 import com.kanha.foodrunner.fragments.FavouriteFragment
-import com.kanha.foodrunner.fragments.UserProfileFragment
-import com.kanha.foodrunner.model.User
 
 
 class FrameActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFrameBinding
 
+    private lateinit var mAuth: FirebaseAuth
+
+    private lateinit var database: DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFrameBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        mAuth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance().reference
 
         //opening the dashboard by default
         openFragment(DashboardFragment(), "Dashboard", R.id.home)
@@ -44,16 +52,10 @@ class FrameActivity : AppCompatActivity() {
         }
 
         //declaring the user
-        val user = User(
-            sharedPreferences.getString("name", "").toString(),
-            sharedPreferences.getString("phone", "").toString(),
-            sharedPreferences.getString("password", "").toString(),
-            sharedPreferences.getString("email", "").toString(),
-            sharedPreferences.getString("address", "").toString()
-        )
+        var user = mAuth.currentUser
         val navigationHeader = binding.navigationView.getHeaderView(0)
-        navigationHeader.findViewById<TextView>(R.id.header_name).text = user.name
-        navigationHeader.findViewById<TextView>(R.id.header_email).text = user.email
+        navigationHeader.findViewById<TextView>(R.id.header_name).text = user?.displayName
+        navigationHeader.findViewById<TextView>(R.id.header_email).text = user?.email
 
         //setting onclicks on the navigations
         binding.navigationView.setNavigationItemSelectedListener {
@@ -80,7 +82,7 @@ class FrameActivity : AppCompatActivity() {
 
                 R.id.logout -> {
                     startActivity(Intent(this@FrameActivity, LoginActivity::class.java))
-                    sharedPreferences.edit().putBoolean("isLoggedIn", false).apply()
+                    mAuth.signOut()
                     finish()
                 }
             }

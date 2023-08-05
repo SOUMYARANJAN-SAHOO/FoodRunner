@@ -7,7 +7,7 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="new_registration">New Registration</string>
     <string name="wrong_username">Unauthorised Username</string>
-    <string name="wrong_mobile_number">Unauthorised Mobile Number</string>
+    <string name="wrong_email">Unauthorised Mobile Number</string>
     <string name="wrong_password">Unauthorised password</string>
     <string name="register">Register</string>
     <string name="name">Name</string>

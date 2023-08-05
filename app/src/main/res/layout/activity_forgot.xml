@@ -64,13 +64,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edtlMobileNumber"
+        android:id="@+id/edtlEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/edtlName"
         android:layout_marginTop="10dp"
         android:layout_marginHorizontal="10dp"
-        android:hint="@string/mobile_number"
+        android:hint="@string/email"
         android:textColorHint="@color/colorContrast"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
@@ -79,10 +79,9 @@
         app:boxStrokeColor="@color/colorSecondary"
         app:boxStrokeWidth="3dp"
         app:hintTextColor="@color/colorContrast"
-        app:prefixText="@string/prefix"
         app:prefixTextColor="@color/colorContrast"
         app:startIconContentDescription="mobile number"
-        app:startIconDrawable="@drawable/phone"
+        app:startIconDrawable="@drawable/email"
         app:startIconTint="@color/colorSecondary"
         app:errorEnabled="true"
         app:errorTextColor="@color/colorError"
@@ -91,12 +90,11 @@
         app:boxStrokeErrorColor="@color/colorError">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtMobileNumber"
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/chewy"
-            android:inputType="phone"
-            android:maxLength="10"
+            android:inputType="textEmailAddress"
             android:maxLines="1"
             android:textColor="@color/colorContrast"
             android:textSize="18sp" />
@@ -106,7 +104,7 @@
         android:id="@+id/btnGetPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edtlMobileNumber"
+        android:layout_below="@id/edtlEmail"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="10dp"
